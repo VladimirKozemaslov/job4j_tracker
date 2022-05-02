@@ -13,8 +13,7 @@ public class Engineer extends Profession {
     public int makeCalculations(int a, int b) {
         if (specialization == "sumEngineer") {
             return a + b;
-        }
-        else {
+        } else {
             return a - b;
         }
     }
