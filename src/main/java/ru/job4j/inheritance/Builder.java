@@ -11,6 +11,6 @@ public class Builder extends Engineer {
     }
 
     public void whatHelmet() {
-        System.out.println("I wear " + helmetColor + " helmet.");
+        System.out.println("I wear " + helmetColor + "helmet.");
     }
 }
