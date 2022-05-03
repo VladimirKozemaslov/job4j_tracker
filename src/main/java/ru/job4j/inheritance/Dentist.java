@@ -3,7 +3,7 @@ package ru.job4j.inheritance;
 import java.util.Date;
 
 public class Dentist extends Doctor {
-    boolean certificated;
+    private boolean certificated;
 
     public Dentist(String name, String surname, String education, Date birthday, int degree, boolean certificated) {
         super(name, surname, education, birthday, degree);

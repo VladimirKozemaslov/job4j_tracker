@@ -6,4 +6,8 @@ public class Diagnosis {
     public Diagnosis(String text) {
         this.text = text;
     }
+
+    public String getText() {
+        return text;
+    }
 }
