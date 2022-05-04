@@ -4,7 +4,7 @@ import java.time.format.DateTimeFormatter;
 
 public class StartUI {
     public static void main(String[] args) {
-        Item item = new Item(1,"Item one");
+        Item item = new Item(1, "Item one");
         System.out.println(item.toString());
     }
 }
