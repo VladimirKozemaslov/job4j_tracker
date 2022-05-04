@@ -12,6 +12,8 @@ public class College {
         student.setGroup(1);
         student.setBeginDate(LocalDateTime.now());
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy");
-        System.out.println("Имя студента " + student.getName() + ", группа " + student.getGroup() + ", дата начала обучения " + student.getBeginDate().format(formatter));
+        System.out.println("Имя студента " + student.getName()
+                + ", группа " + student.getGroup()
+                + ", дата начала обучения " + student.getBeginDate().format(formatter));
     }
 }
