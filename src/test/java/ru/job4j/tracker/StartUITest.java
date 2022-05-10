@@ -104,9 +104,9 @@ public class StartUITest {
                         + "0. Show all items" + ln
                         + "1. Exit Program" + ln
                         + "=== Show all items ===" + ln
-                        + "Item{id=1, name='test1', created=10-мая-вторник-2022}" + ln
-                        + "Item{id=2, name='test2', created=10-мая-вторник-2022}" + ln
-                        + "Item{id=3, name='test3', created=10-мая-вторник-2022}" + ln
+                        + "Item{id=1, name='test1', created=10-05-2022}" + ln
+                        + "Item{id=2, name='test2', created=10-05-2022}" + ln
+                        + "Item{id=3, name='test3', created=10-05-2022}" + ln
                         + "Menu:" + ln
                         + "0. Show all items" + ln
                         + "1. Exit Program" + ln
@@ -136,7 +136,7 @@ public class StartUITest {
                         + "0. Find item by id" + ln
                         + "1. Exit Program" + ln
                         + "=== Find item by id ===" + ln
-                        + "Item{id=2, name='test2', created=10-мая-вторник-2022}" + ln
+                        + "Item{id=2, name='test2', created=10-05-2022}" + ln
                         + "Menu:" + ln
                         + "0. Find item by id" + ln
                         + "1. Exit Program" + ln
@@ -167,8 +167,8 @@ public class StartUITest {
                         + "1. Exit Program" + ln
                         + "=== Find items by name ===" + ln
                         + "Enter name: " + ln
-                        + "Item{id=2, name='John', created=10-мая-вторник-2022}" + ln
-                        + "Item{id=3, name='John', created=10-мая-вторник-2022}" + ln
+                        + "Item{id=2, name='John', created=10-05-2022}" + ln
+                        + "Item{id=3, name='John', created=10-05-2022}" + ln
                         + "Menu:" + ln
                         + "0. Find items by name" + ln
                         + "1. Exit Program" + ln
