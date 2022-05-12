@@ -104,9 +104,9 @@ public class StartUITest {
                         + "0. Show all items" + ln
                         + "1. Exit Program" + ln
                         + "=== Show all items ===" + ln
-                        + "Item{id=1, name='test1', created=12-05-2022}" + ln
-                        + "Item{id=2, name='test2', created=12-05-2022}" + ln
-                        + "Item{id=3, name='test3', created=12-05-2022}" + ln
+                        + one + ln
+                        + two + ln
+                        + three + ln
                         + "Menu:" + ln
                         + "0. Show all items" + ln
                         + "1. Exit Program" + ln
