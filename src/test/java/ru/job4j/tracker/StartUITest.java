@@ -136,7 +136,7 @@ public class StartUITest {
                         + "0. Find item by id" + ln
                         + "1. Exit Program" + ln
                         + "=== Find item by id ===" + ln
-                        + "Item{id=2, name='test2', created=12-05-2022}" + ln
+                        + two + ln
                         + "Menu:" + ln
                         + "0. Find item by id" + ln
                         + "1. Exit Program" + ln
@@ -167,8 +167,8 @@ public class StartUITest {
                         + "1. Exit Program" + ln
                         + "=== Find items by name ===" + ln
                         + "Enter name: " + ln
-                        + "Item{id=2, name='John', created=12-05-2022}" + ln
-                        + "Item{id=3, name='John', created=12-05-2022}" + ln
+                        + john1 + ln
+                        + john2 + ln
                         + "Menu:" + ln
                         + "0. Find items by name" + ln
                         + "1. Exit Program" + ln
