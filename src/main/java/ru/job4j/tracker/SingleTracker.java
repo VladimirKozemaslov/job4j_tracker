@@ -1,6 +1,6 @@
 package ru.job4j.tracker;
 
-public class SingleTracker extends Tracker {
+public class SingleTracker {
     private static Tracker tracker = null;
 
     private SingleTracker() {
@@ -18,12 +18,10 @@ public class SingleTracker extends Tracker {
         return tracker.add(item);
     }
 
-    @Override
     public Item[] findAll() {
         return tracker.findAll();
     }
 
-    @Override
     public Item[] findByName(String key) {
         return tracker.findByName(key);
     }
@@ -32,12 +30,10 @@ public class SingleTracker extends Tracker {
         return tracker.findById(id);
     }
 
-    @Override
     public boolean replace(int id, Item item) {
         return tracker.replace(id, item);
     }
 
-    @Override
     public boolean delete(int id) {
         return tracker.delete(id);
     }
