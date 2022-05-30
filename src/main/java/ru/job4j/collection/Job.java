@@ -46,5 +46,4 @@ public class Job implements Comparable<Job> {
     public int hashCode() {
         return Objects.hash(name, priority);
     }
-
 }
