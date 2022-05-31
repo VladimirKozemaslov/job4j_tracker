@@ -6,15 +6,8 @@ public class LexSort implements Comparator<String> {
 
     @Override
     public int compare(String left, String right) {
-        return Integer.compare(getNum(left), getNum(right));
-    }
-
-    private static int getNum(String str) {
-        String[] arr = str.split(" ")[0].split("\\.");
-        StringBuilder sb = new StringBuilder();
-        for (String digit : arr) {
-            sb.append(digit);
-        }
-        return Integer.parseInt(sb.toString());
+        left = left.split("\\.")[0];
+        right = right.split("\\.")[0];
+        return Integer.compare(Integer.parseInt(left), Integer.parseInt(right));
     }
 }
