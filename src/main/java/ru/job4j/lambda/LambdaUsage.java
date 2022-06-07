@@ -10,7 +10,7 @@ public class LambdaUsage {
         List<String> strings = Arrays.asList("eeeee", "a",  "ccc", "dddd", "bb");
         Comparator<String> comparator = (left, right) -> {
             int result = Integer.compare(right.length(), left.length());
-            System.out.println(result);
+            System.out.println("compare - " + left.length() + " : " + right.length());
             return result;
         };
         strings.sort(comparator);
