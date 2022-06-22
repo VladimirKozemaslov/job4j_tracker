@@ -19,9 +19,9 @@ public class College {
     }
 
     public Optional<Subject> findBySubjectName(String account, String name) {
-        return findByAccount(account).stream()
-                .flatMap(student -> students.get(student).stream())
+        return findByAccount(account)
+                .flatMap(value -> students.get(value).stream()
                 .filter(s -> s.getName().equals(name))
-                .findFirst();
+                .findFirst());
     }
 }
