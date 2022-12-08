@@ -46,7 +46,7 @@ public class SqlTracker implements Store {
     @Override
     public Item add(Item item) {
         try (PreparedStatement statement =
-                     cn.prepareStatement("insert into items(name, create_date) values (?, ?)",
+                     cn.prepareStatement("insert into items(name, created) values (?, ?)",
                              Statement.RETURN_GENERATED_KEYS)) {
             statement.setString(1, item.getName());
             statement.setTimestamp(2, Timestamp.valueOf(item.getCreated()));
@@ -66,7 +66,7 @@ public class SqlTracker implements Store {
     public boolean replace(int id, Item item) {
         boolean result = false;
         try (PreparedStatement statement =
-                     cn.prepareStatement("update items set name = ?, create_date = ? where id = ?")) {
+                     cn.prepareStatement("update items set name = ?, created = ? where id = ?")) {
             statement.setString(1, item.getName());
             statement.setTimestamp(2, Timestamp.valueOf(item.getCreated()));
             statement.setInt(3, id);
@@ -99,7 +99,7 @@ public class SqlTracker implements Store {
                     items.add(new Item(
                             resultSet.getInt("id"),
                             resultSet.getString("name"),
-                            resultSet.getTimestamp("create_date").toLocalDateTime()
+                            resultSet.getTimestamp("created").toLocalDateTime()
                     ));
                 }
             }
@@ -119,7 +119,7 @@ public class SqlTracker implements Store {
                     items.add(new Item(
                             resultSet.getInt("id"),
                             resultSet.getString("name"),
-                            resultSet.getTimestamp("create_date").toLocalDateTime()
+                            resultSet.getTimestamp("created").toLocalDateTime()
                     ));
                 }
             }
@@ -139,7 +139,7 @@ public class SqlTracker implements Store {
                     item = new Item(
                             resultSet.getInt("id"),
                             resultSet.getString("name"),
-                            resultSet.getTimestamp("create_date").toLocalDateTime());
+                            resultSet.getTimestamp("created").toLocalDateTime());
                 }
             }
         } catch (Exception e) {
