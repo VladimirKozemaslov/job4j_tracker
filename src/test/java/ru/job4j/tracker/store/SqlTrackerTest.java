@@ -63,14 +63,16 @@ public class SqlTrackerTest {
         SqlTracker tracker = new SqlTracker(connection);
         Item item = tracker.add(new Item("Item X"));
         Item newItem = new Item(item.getId(), "Item Y", item.getCreated());
-        assertThat(tracker.replace(item.getId(), newItem)).isTrue();
+        tracker.replace(item.getId(), newItem);
+        assertThat(newItem.getName()).isEqualTo(tracker.findById(item.getId()).getName());
     }
 
     @Test
     public void whenDeleteItemAndResultIsTrue() {
         SqlTracker tracker = new SqlTracker(connection);
         Item item = tracker.add(new Item("Item X"));
-        assertThat(tracker.delete(item.getId())).isTrue();
+        tracker.delete(item.getId());
+        assertThat(tracker.findById(item.getId())).isNull();
     }
 
     @Test
