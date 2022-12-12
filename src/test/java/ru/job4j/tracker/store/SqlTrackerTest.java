@@ -11,7 +11,6 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Properties;
 
@@ -106,9 +105,7 @@ public class SqlTrackerTest {
     @Test
     public void whenFindByIdItemMatched() {
         SqlTracker tracker = new SqlTracker(connection);
-        Item itemX = tracker.add(new Item("Item X"));
         Item itemY = tracker.add(new Item("Item Y"));
-        Item itemZ = tracker.add(new Item("Item Z"));
         Item result = tracker.findById(itemY.getId());
         assertThat(result).isEqualTo(itemY);
     }
